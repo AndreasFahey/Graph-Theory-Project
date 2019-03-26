@@ -1,1 +1,4 @@
 This is my Research and Reference Page for my Project.
+
+My Go To Reference Down Below. Very Deatiled description of Infix to Postfix.
+http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
