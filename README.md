@@ -10,3 +10,5 @@ Third Commit - Thompsons Construction. Nfa and State classes made with inital an
 Fourth Commit - Set up Compile function for C. Will now test with print in cmder for Shunting Yard Algorithm & Thompsons Construction.
 
 Fifth Commit - Added print functions to Shunting Yard Algorithm and Thompsons Construction. SYA printed, need to fix Thompsons Construction print. 
+
+Sixth Commit - Here i continued on, i added the followes function for the state. 
