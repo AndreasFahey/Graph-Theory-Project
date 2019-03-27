@@ -35,6 +35,8 @@ def shunt(infix):
     
     return postfix 
 
+#print(shunt("a.(b|d).c*"))
+
 class state:
     label1 = None
     edge1 = None
@@ -48,7 +50,7 @@ class nfa:
         self.initial = initial
         self.accept = accept
 
-def compile (postfix):
+def compile(postfix):
     """Compile postfix regular expression > NFA"""
 
     stack = []
@@ -107,3 +109,8 @@ def compile (postfix):
             stack.append(nfa(initial, accept))
 
     return stack.pop()
+
+#print(compile("ab.cd.|"))
+
+
+
