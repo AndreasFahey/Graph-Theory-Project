@@ -46,4 +46,64 @@ class nfa:
 
     def __init__(self, initial, accept):
         self.initial = initial
-        self.accept = accept    
+        self.accept = accept
+
+def compile (postfix):
+    """Compile postfix regular expression > NFA"""
+
+    stack = []
+
+    for c in postfix:
+        if c == '.':
+            nfa1 = stack.pop()
+            nfa2 = stack.pop()
+            nfa1.accept.edge1 = nfa2.initial
+            stack.append(nfa(nfa1.initial, nfa2.accept))
+
+        elif c == '|':
+            nfa1 = stack.pop()
+            nfa2 = stack.pop()
+            initial = state()
+            initial.edge1 = nfa1.initial
+            initial.edge2 = nfa2.initial
+
+            accept = state()
+            nfa1.accept.edge1 = accept
+            nfa2.accept.edge1 = accept
+            stack.append(nfa(initial, accept))
+
+        elif c == '*':
+            nfa1 = stack.pop()
+            initial = state()
+            accept = state()
+            initial.edge1 = nfa1.initial
+            initial.edge2 = accept
+            stack.append(nfa(initial, accept))
+
+        elif c == "+":
+            nfa1 = stack.pop()
+            initial = state()
+            accept = state()
+            nfa3 = nfa(initial, accept)
+            nfa1.accept.edge1 = nfa1.initial
+            nfa1.accept.edge2 = nfa2.initial
+            nfa3.initial.edge1 = nfa3.accept
+            stack.append(nfa(nfa1.initial, nfa3.accept))
+
+        elif c == "?":
+            nfa1 = stack.pop()
+            initial = state()
+            accept = state()
+            initial.edge1 = nfa1.initial
+            initial.edge2 = accept 
+            nfa1.accept.edge1 = accept
+            stack.append(nfa(initial, accept))
+
+        else:
+            accept = state()
+            initial = state()
+            initial.label1 = c
+            initial.edge1 = accept
+            stack.append(nfa(initial, accept))
+
+    return stack.pop()

@@ -2,3 +2,9 @@ This is my Research and Reference Page for my Project.
 
 My Go To Reference Down Below. Very Deatiled description of Infix to Postfix.
 http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
+
+This Reference is quite short but makes the compile function alot easier to understand. I find 
+w3schools very helpful with their example snippets of code. I went through the videos but wanted
+to know basics, this helped.
+https://www.w3schools.com/python/ref_func_compile.asp
+
