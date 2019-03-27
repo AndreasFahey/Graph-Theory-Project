@@ -8,6 +8,8 @@ def shunt(infix):
     """SYA To Convert Regular Expressions from infix to postfix"""
 
     specials = {
+        "+": 70,
+        "?": 60,
         "*": 50,
         ".": 40,
         "|": 30
@@ -51,20 +53,20 @@ class nfa:
         self.accept = accept
 
 def compile(postfix):
-    """Compile postfix regular expression > NFA"""
+    """Compile postfix regular expression NFA"""
 
     stack = []
 
     for c in postfix:
         if c == '.':
-            nfa1 = stack.pop()
             nfa2 = stack.pop()
+            nfa1 = stack.pop()
             nfa1.accept.edge1 = nfa2.initial
             stack.append(nfa(nfa1.initial, nfa2.accept))
 
         elif c == '|':
-            nfa1 = stack.pop()
             nfa2 = stack.pop()
+            nfa1 = stack.pop()
             initial = state()
             initial.edge1 = nfa1.initial
             initial.edge2 = nfa2.initial
@@ -86,11 +88,10 @@ def compile(postfix):
             nfa1 = stack.pop()
             initial = state()
             accept = state()
-            nfa3 = nfa(initial, accept)
+            initial.edge1 = nfa1.initial
             nfa1.accept.edge1 = nfa1.initial
-            nfa1.accept.edge2 = nfa2.initial
-            nfa3.initial.edge1 = nfa3.accept
-            stack.append(nfa(nfa1.initial, nfa3.accept))
+            nfa1.accept.edge2 = accept
+            stack.append(nfa(initial, accept))
 
         elif c == "?":
             nfa1 = stack.pop()
@@ -111,6 +112,20 @@ def compile(postfix):
     return stack.pop()
 
 #print(compile("ab.cd.|"))
+
+def followes(state):
+    """Return states from the state following e arrows"""
+
+    states = set()
+    states.add(state)
+
+    if state.label is None:
+        if state.edge1 is not None:
+            states |= followes(state.edge1)
+        if state.edge2 is not None:
+            states |= followes(state.edge2)
+
+    return states
 
 
 
