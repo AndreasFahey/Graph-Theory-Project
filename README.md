@@ -15,4 +15,6 @@ Sixth Commit - Here i continued on, i added the followes function for the state.
 
 Seventh Commit - In this commit i inserted a match function. I am now printing in cmder. I also fixed my Thompsons Construction code. Messed around with special numbers (specials) and my loops and managed to fix the issue. I also researched more and added the references used to the text doc.
 
+Eighth Commit - Here i wanted to individually test my shunting yard algorithm on its own. Works !
+
 
