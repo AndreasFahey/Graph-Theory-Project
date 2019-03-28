@@ -10,6 +10,9 @@ https://www.youtube.com/watch?v=vq-nUF0G4fI
 Small video on def functions in python. 
 https://www.youtube.com/watch?v=owglNL1KQf0
 
+Nice informative piece on Thompsons Construction.
+https://xysun.github.io/posts/regex-parsing-thompsons-algorithm.html
+
 This Reference is quite short but makes the compile function alot easier to understand. I find 
 w3schools very helpful with their example snippets of code. I went through the videos but wanted
 to know basics, this helped.

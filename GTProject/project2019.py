@@ -37,8 +37,6 @@ def shunt(infix):
     
     return postfix 
 
-#print(shunt("a.(b|d).c*"))
-
 class state:
     label1 = None
     edge1 = None
@@ -109,8 +107,6 @@ def compile(postfix):
             nfaStack.append(nfa(initial, accept))
 
     return nfaStack.pop()
-
-#print(compile("ab.cd.|"))
 
 def followes(state):
     """Return states from the state following e arrows"""
