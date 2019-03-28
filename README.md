@@ -17,4 +17,6 @@ Seventh Commit - In this commit i inserted a match function. I am now printing i
 
 Eighth Commit - Here i wanted to individually test my shunting yard algorithm on its own. Works !
 
+Ninth Commit - More Research added and referenced on Thompsons Construction. 
+
 
