@@ -143,8 +143,33 @@ def match(infix, string):
 
     return (nfa.accept in curSet)
 
-infixes = ['a.b.c*', 'a.b.c+', 'a.(b|d).c*', '(a.(b|d))', 'a.(b.b)*.c', 'a.b.c?']
-strings = ['', 'abc', 'abbc', 'abcc', 'abad', 'abbcc', 'ab']
+#infixes = ['a.b.c*', 'a.b.c+', 'a.(b|d).c*', '(a.(b|d))', 'a.(b.b)*.c', 'a.b.c?']
+#strings = ['', 'abc', 'abbc', 'abcc', 'abcd', 'abbcc', 'abd']
+
+noi = int(input("Please Enter The Number of Infixes You Would Like to use: "))
+
+count = 1
+
+infixes = []
+strings = []
+
+while noi > 0:
+    infix = input("Please Enter Infix: ")
+    infix = infix.replace(" ","")
+    infixes.append(infix)
+    count+=1
+    noi -= 1
+
+print(infixes)
+
+nos = int(input("Please Enter The Number of Strings You Would Like to use: "))
+
+while nos > 0:
+    string = input("Please Enter String: ")
+    strings.append(string)
+    nos -= 1
+
+print (strings)
 
 for i in infixes:
     for s in strings:
