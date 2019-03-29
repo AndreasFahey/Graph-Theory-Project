@@ -19,4 +19,6 @@ Eighth Commit - Here i wanted to individually test my shunting yard algorithm on
 
 Ninth Commit - More Research added and referenced on Thompsons Construction. 
 
+Tenth Commit - Added user input for matching algorithm. Also added another bit of research and refernced it. This aided me in being able to implement user input to my code.
+
 
