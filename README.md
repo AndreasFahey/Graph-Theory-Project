@@ -21,4 +21,6 @@ Ninth Commit - More Research added and referenced on Thompsons Construction.
 
 Tenth Commit - Added user input for matching algorithm. Also added another bit of research and refernced it. This aided me in being able to implement user input to my code.
 
+Eleventh Commit - Here i finally added comments to my code. I prefer to do them after so i know what each line does etc.
+
 
