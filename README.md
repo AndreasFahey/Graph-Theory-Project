@@ -17,7 +17,9 @@ This algorithm converts an infix expression into a postfix expression.
 Stack is used in this algorithm to hold operators not numbers. The purpose of stack in this algorithm is to reverse the order of operators in the expression. It also serves as a storage structure as no operator can be printed until both operands appear.
 
 http://www.oxfordmathcenter.com/drupal7/node/628 
+
 Rules:
+
 1.If the incoming symbols is an operand, print it..
 
 2.If the incoming symbol is a left parenthesis, push it on the stack.
