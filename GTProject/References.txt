@@ -25,5 +25,21 @@ This was a great help in allowing me to implement user input into my project.
 I wanted the user to be able enter their own infixes and strings for the matching algorithm.
 https://www.pythonforbeginners.com/basics/getting-user-input-from-the-keyboard
 
+Nice Website where you can input Regular Expressions and convert them to NFA. 
+Converter website which came in handy for checking and understanding it more.
+http://hackingoff.com/compilers/regular-expression-to-nfa-dfa
+
+Gave me a quick and better understanding of an NFA.
+ https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
+
+I found the lecture videos very helpful throughout this project.
+The intro videos helped introduce me to a new language for me and 
+gave me a better understanding of how python works. Very Helpful and Useful
+videos.
+
 Other References & Research:
 https://swcarpentry.github.io/python-novice-inflammation/06-func/index.html
+https://www.youtube.com/watch?v=Wz85Hiwi5MY
+http://www.oxfordmathcenter.com/drupal7/node/628 
+https://en.wikipedia.org/wiki/Thompson%27s_construction
+http://www.cs.may.ie/staff/jpower/Courses/Previous/parsing/node5.html

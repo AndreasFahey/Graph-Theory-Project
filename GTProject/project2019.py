@@ -70,7 +70,7 @@ class nfa:
 
 #This method turns a regular expression into a nfa
 def compile(postfix):
-    """Compile postfix regular expression NFA"""
+    """Convert a regular expression (postfix) into an NFA"""
 
     nfaStack = []
 
